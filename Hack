@@ -1,0 +1,180 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local autorob = Instance.new("TextButton")
+local autoarrest = Instance.new("TextButton")
+local infdonuts = Instance.new("TextButton")
+local title = Instance.new("TextLabel")
+local jailbreaktroll = Instance.new("TextButton")
+local antiafk = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local Openmain = Instance.new("Frame")
+local open = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.0675406829, 0, 0.0635451525, 0)
+main.Size = UDim2.new(0, 300, 0, 300)
+main.Visible = false
+main.Active = true
+main.Draggable = true
+
+autorob.Name = "auto rob"
+autorob.Parent = main
+autorob.BackgroundColor3 = Color3.fromRGB(208, 0, 0)
+autorob.BorderColor3 = Color3.fromRGB(85, 0, 255)
+autorob.Position = UDim2.new(0.0232558139, 0, 0.154577807, 0)
+autorob.Size = UDim2.new(0, 78, 0, 50)
+autorob.Style = Enum.ButtonStyle.RobloxButtonDefault
+autorob.Font = Enum.Font.SciFi
+autorob.Text = "auto rob"
+autorob.TextColor3 = Color3.fromRGB(255, 255, 255)
+autorob.TextSize = 14.000
+autorob.MouseButton1Down:connect(function()
+	loadstring(game:GetObjects("rbxassetid://1461971147")[1].Source)()
+end)
+
+autoarrest.Name = "auto arrest"
+autoarrest.Parent = main
+autoarrest.BackgroundColor3 = Color3.fromRGB(0, 0, 107)
+autoarrest.BorderColor3 = Color3.fromRGB(0, 5, 53)
+autoarrest.Position = UDim2.new(0.365348905, 0, 0.15271908, 0)
+autoarrest.Size = UDim2.new(0, 79, 0, 50)
+autoarrest.Style = Enum.ButtonStyle.RobloxButtonDefault
+autoarrest.Font = Enum.Font.SciFi
+autoarrest.Text = "auto arrest"
+autoarrest.TextColor3 = Color3.fromRGB(255, 255, 255)
+autoarrest.TextSize = 14.000
+autoarrest.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/HazeWasTaken/JailedHax/master/AutoArrest'))()
+end)
+
+infdonuts.Name = "inf donuts"
+infdonuts.Parent = main
+infdonuts.BackgroundColor3 = Color3.fromRGB(0, 0, 107)
+infdonuts.BorderColor3 = Color3.fromRGB(0, 5, 53)
+infdonuts.Position = UDim2.new(0.0232558139, 0, 0.337898403, 0)
+infdonuts.Size = UDim2.new(0, 78, 0, 50)
+infdonuts.Style = Enum.ButtonStyle.RobloxButtonDefault
+infdonuts.Font = Enum.Font.SciFi
+infdonuts.Text = "inf donuts"
+infdonuts.TextColor3 = Color3.fromRGB(255, 255, 255)
+infdonuts.TextSize = 14.000
+infdonuts.MouseButton1Down:connect(function()
+	while wait(2) do
+		game.Workspace.TouchTrigger.Donut.Position = game:GetService("Players").LocalPlayer.Character.Head.Position
+	end
+end)
+
+title.Name = "title"
+title.Parent = main
+title.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+title.Size = UDim2.new(0, 300, 0, 41)
+title.Font = Enum.Font.PermanentMarker
+title.Text = "Prepy"
+title.TextColor3 = Color3.fromRGB(0, 12, 255)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+jailbreaktroll.Name = "jailbreak troll"
+jailbreaktroll.Parent = main
+jailbreaktroll.BackgroundColor3 = Color3.fromRGB(0, 0, 107)
+jailbreaktroll.BorderColor3 = Color3.fromRGB(0, 5, 53)
+jailbreaktroll.Position = UDim2.new(0.701601923, 0, 0.152024791, 0)
+jailbreaktroll.Size = UDim2.new(0, 78, 0, 50)
+jailbreaktroll.Style = Enum.ButtonStyle.RobloxButtonDefault
+jailbreaktroll.Font = Enum.Font.SciFi
+jailbreaktroll.Text = "jb troll gui"
+jailbreaktroll.TextColor3 = Color3.fromRGB(255, 255, 255)
+jailbreaktroll.TextSize = 14.000
+jailbreaktroll.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Scripts/master/Vynixius%20Jailbreak", true))()
+end)
+
+antiafk.Name = "anti afk"
+antiafk.Parent = main
+antiafk.BackgroundColor3 = Color3.fromRGB(0, 0, 107)
+antiafk.BorderColor3 = Color3.fromRGB(0, 5, 53)
+antiafk.Position = UDim2.new(0.365348905, 0, 0.336101592, 0)
+antiafk.Size = UDim2.new(0, 79, 0, 50)
+antiafk.Style = Enum.ButtonStyle.RobloxButtonDefault
+antiafk.Font = Enum.Font.SciFi
+antiafk.Text = "anti afk"
+antiafk.TextColor3 = Color3.fromRGB(255, 255, 255)
+antiafk.TextSize = 14.000
+antiafk.MouseButton1Down:connect(function()
+	local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+end)
+
+Noclip.Name = "Noclip"
+Noclip.Parent = main
+Noclip.BackgroundColor3 = Color3.fromRGB(0, 0, 107)
+Noclip.BorderColor3 = Color3.fromRGB(0, 5, 53)
+Noclip.Position = UDim2.new(0.701601923, 0, 0.335358143, 0)
+Noclip.Size = UDim2.new(0, 78, 0, 50)
+Noclip.Style = Enum.ButtonStyle.RobloxButtonDefault
+Noclip.Font = Enum.Font.SciFi
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.TextSize = 14.000
+Noclip.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/yG9JmuvJ'))()
+end)
+
+close.Name = "close"
+close.Parent = main
+close.BackgroundColor3 = Color3.fromRGB(0, 0, 107)
+close.BorderColor3 = Color3.fromRGB(0, 5, 53)
+close.Position = UDim2.new(0.89493525, 0, 0.0120247882, 0)
+close.Size = UDim2.new(0, 31, 0, 32)
+close.Style = Enum.ButtonStyle.RobloxButtonDefault
+close.Font = Enum.Font.SciFi
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 15.
+close.MouseButton1Down:connect(function()
+	main.Visible = false
+	Openmain.Visible = true
+	close.Draggable = false
+end)
+
+Openmain.Name = "Openmain"
+Openmain.Parent = ScreenGui
+Openmain.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Openmain.Position = UDim2.new(0, 0, 0.591973305, 0)
+Openmain.Size = UDim2.new(0, 100, 0, 27)
+Openmain.Active = true
+Openmain.Draggable = true
+
+open.Name = "open"
+open.Parent = Openmain
+open.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+open.Size = UDim2.new(0, 100, 0, 30)
+open.SizeConstraint = Enum.SizeConstraint.RelativeYY
+open.Style = Enum.ButtonStyle.RobloxButtonDefault
+open.Font = Enum.Font.SciFi
+open.Text = "Open"
+open.TextColor3 = Color3.fromRGB(255, 255, 255)
+open.TextSize = 20.000
+open.TextWrapped = true
+open.MouseButton1Down:connect(function()
+	Openmain.Visible = false
+	main.Visible = true
+end)
